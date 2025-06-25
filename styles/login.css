@@ -1,0 +1,43 @@
+img{
+    width: 40%;
+}
+
+.alice {
+    font-family: "Alice", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1rem;
+  }
+
+  input{
+    border: 2px solid gray;
+    border-radius: 10px;
+    display: flex;
+    width: 20%;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(
+        circle at center,
+        #e6ffcc,   
+        #ffe680,  
+        #ffd699,   
+        #ffb3d9,   
+        #ccf2ff    
+    );
+    background-attachment: fixed;
+}
+
+button{
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 10px;
+}
