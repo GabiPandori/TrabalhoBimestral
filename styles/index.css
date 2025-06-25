@@ -10,6 +10,9 @@
 }
 img{
     width: 40%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .alice {
