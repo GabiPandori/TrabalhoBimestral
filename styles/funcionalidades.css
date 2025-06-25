@@ -32,30 +32,37 @@ body {
 
 #btnRosa{
     border: 5px solid pink;
+    border-radius: 15px;
     font-size: 20px;
 }
 #btnLaranja{
     border: 5px solid rgb(250, 211, 140);
+    border-radius: 15px;
     font-size: 20px;
 }
 #btnAmarelo{
     border: 5px solid rgb(248, 248, 94);
+    border-radius: 15px;
     font-size: 20px;
 }
 #btnVerde{
     border: 5px solid rgb(173, 245, 173);
+    border-radius: 15px;
     font-size: 20px;
 }
 #btnAzul{
     border: 5px solid rgb(136, 136, 226);
+    border-radius: 15px;
     font-size: 20px;
 }
 #btnRoxo{
     border: 5px solid rgb(204, 112, 204);
+    border-radius: 15px;
     font-size: 20px;
 }
 #btnVermelho{
     border: 5px solid rgb(255, 142, 142);
+    border-radius: 15px;
     font-size: 20px;
 }
 
