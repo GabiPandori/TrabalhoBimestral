@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       novaPublicacao.textContent = texto;
 
       publicacoesDiv.appendChild(novaPublicacao);
-
-      textarea.value = ""; // limpa o campo
+      textarea.value = "";
     } else {
       alert("Por favor, escreva algo antes de enviar.");
     }
