@@ -25,13 +25,23 @@ textarea {
   font-family:Playfair, serif;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08) inset;
   transition: border 0.3s ease;
-  
 }
-
 textarea:focus {
   border-color: rgb(136, 136, 226);
   outline: none;
 }
 #enviarTerapeuta{
   text-align: right;
+}
+.publicacao {
+  background: #ffffff;
+  border-left: 6px solid #9b59b6;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.publicacao:hover {
+  transform: translateY(-3px);
 }
