@@ -1,49 +1,40 @@
-const listaPostagens = document.querySelector("#lista-postagens");
-const formPostagem = document.querySelector("#form-postagem");
-const campoTexto = document.querySelector("#nova-postagem");
+const div = document.getElementById("publicacoes");
+const campoTexto = document.getElementById("texto");
+const botao = document.getElementById("EnviarTerapeuta");
 
-let postagens = JSON.parse(localStorage.getItem("postagens")) || [];
+// Configurando o texto do botão
+botao.innerHTML = "Enviar";
 
-function renderizarPostagens() {
-    listaPostagens.innerHTML = ""; 
+// Criando uma lista para exibir as postagens
+const ul = document.createElement("ul");
+div.appendChild(ul);
 
-    postagens.forEach((texto, index) => {
-        const li = document.createElement("li");
-        li.textContent = texto;
-
-        const botaoRemover = document.createElement("button");
-        botaoRemover.textContent = "🗑️";
-        botaoRemover.classList.add("remover-postagem");
-        botaoRemover.addEventListener("click", () => {
-            removerPostagem(index);
-        });
-
-        li.appendChild(botaoRemover);
-        listaPostagens.appendChild(li);
-    });
-}
-
-formPostagem.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const texto = campoTexto.value.trim();
+// Adicionando evento ao botão
+botao.addEventListener("click", () => {
+    const texto = campoTexto.value.trim(); // Captura o texto do campo de entrada
     if (texto === "") {
         alert("Digite algo antes de postar.");
         return;
     }
 
-    postagens.push(texto); 
-    campoTexto.value = "";
-    salvarPostagens();
-    renderizarPostagens();
-});
+    // Criando um elemento para a postagem
+    const postagem = document.createElement("li");
+    postagem.textContent = texto;
 
-function removerPostagem(index) {
-    postagens.splice(index, 1); 
-    salvarPostagens();
-    renderizarPostagens();
-}
-function salvarPostagens() {
-    localStorage.setItem("postagens", JSON.stringify(postagens));
-}
-renderizarPostagens();
+    // Criando botão de remover postagem
+    const botaoRemover = document.createElement("button");
+    botaoRemover.innerText = "🗑️";
+    botaoRemover.classList.add("remover-postagem");
+    botaoRemover.addEventListener("click", () => {
+        ul.removeChild(postagem); // Remove a postagem da lista
+    });
+
+    // Adicionando o botão de remover à postagem
+    postagem.appendChild(botaoRemover);
+
+    // Adicionando a postagem à lista
+    ul.appendChild(postagem);
+
+    // Limpando o campo de texto
+    campoTexto.value = "";
+});
